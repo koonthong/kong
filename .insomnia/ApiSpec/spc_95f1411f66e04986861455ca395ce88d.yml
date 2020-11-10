@@ -1,0 +1,196 @@
+_id: spc_95f1411f66e04986861455ca395ce88d
+type: ApiSpec
+parentId: wrk_5a84091544084fd68e26738737a2ab45
+modified: 1604912859239
+created: 1604650356808
+fileName: Insomnia Designer
+contents: >-
+  {
+      "openapi": "3.0.0",
+      "servers": [
+          {
+              "url": "192.168.99.100:8001"
+          }
+      ],
+      "info": {
+          "description": "Kong API Gatewat sample description",
+          "version": "1.0.0",
+          "title": "kong API Gateway",
+          "termsOfService": "https://konghq.com/",
+          "contact": {
+              "email": "kong@kong.com"
+          },
+          "license": {
+              "name": "MIT",
+              "url": "https://opensource.org/licenses/MIT"
+          }
+      },
+      "tags": [
+          {
+              "name": "anything",
+              "description": "Everything kong API Gateway",
+              "externalDocs": {
+                  "description": "",
+                  "url": "https://konghq.com/blog/General-Availability-of-Kong-Enterprise-2020"
+              }
+          }
+      ],
+      "paths": {
+          "/route1": {
+              "get": {
+                  "summary": "",
+                  "description": "",
+                  "parameters": [],
+                  "operationId": "",
+                  "responses": {
+                      "": {
+                          "description": "Default response",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              },
+                              "change/me": {
+                                  "schema": {}
+                              }
+                          }
+                      }
+                  },
+                  "tags": [
+                      "anything"
+                  ]
+              },
+              "post": {
+                  "summary": "",
+                  "description": "",
+                  "parameters": [],
+                  "operationId": "",
+                  "responses": {
+                      "default": {
+                          "description": "Default response"
+                      }
+                  },
+                  "tags": [
+                      "anything"
+                  ]
+              },
+              "put": {
+                  "summary": "",
+                  "description": "",
+                  "parameters": [],
+                  "operationId": "",
+                  "responses": {
+                      "default": {
+                          "description": "Default response"
+                      }
+                  },
+                  "tags": [
+                      "anything"
+                  ]
+              },
+              "delete": {
+                  "summary": "",
+                  "description": "",
+                  "parameters": [],
+                  "operationId": "",
+                  "responses": {
+                      "default": {
+                          "description": "Default response"
+                      }
+                  },
+                  "tags": [
+                      "anything"
+                  ]
+              }
+          },
+          "/roue2": {
+              "get": {
+                  "summary": "",
+                  "description": "",
+                  "parameters": [
+                      {
+                          "name": "newParam",
+                          "in": "query",
+                          "required": false,
+                          "schema": {
+                              "type": "string"
+                          }
+                      }
+                  ],
+                  "operationId": "",
+                  "responses": {
+                      "200": {
+                          "description": "ok",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "404": {
+                          "description": "Not Found",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      }
+                  },
+                  "callbacks": {
+                      "newCallback": {
+                          "newExpression": {}
+                      }
+                  }
+              }
+          }
+      },
+      "externalDocs": {
+          "description": "",
+          "url": "https://mermade.github.io/shins/asyncapi.html"
+      },
+      "components": {
+          "schemas": {},
+          "requestBodies": {
+              "Pet": {
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/Pet"
+                          }
+                      },
+                      "application/xml": {
+                          "schema": {
+                              "$ref": "#/components/schemas/Pet"
+                          }
+                      }
+                  },
+                  "description": "Pet object that needs to be added to the store",
+                  "required": true
+              },
+              "UserArray": {
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "array",
+                              "items": {
+                                  "$ref": "#/components/schemas/User"
+                              }
+                          }
+                      }
+                  },
+                  "description": "List of user object",
+                  "required": true
+              }
+          },
+          "securitySchemes": {
+              "api_key": {
+                  "type": "apiKey",
+                  "name": "api_key",
+                  "in": "header"
+              }
+          },
+          "links": {},
+          "callbacks": {}
+      },
+      "security": []
+  }
+contentType: yaml
